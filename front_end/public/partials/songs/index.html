@@ -1,0 +1,16 @@
+<div class="todos">
+  <div class="todo" ng-repeat="song in main.songs">
+    <div>
+      <p>Title: {{song.title}}</p>
+      <p>Artist: {{song.artist_name}}</p>
+      <p>Preview Url: {{song.preview_url}}</p>
+      <img ng-src="{{song.artwork}}" /></p>
+      <p>Title: {{song.price}}</p>
+
+      <div class="nav">
+        <button ui-sref="editSong({song: song})">Edit</button>
+        <button ng-click="main.deleteSong(song.id)">&#10006</button>
+      </div>
+    </div>
+  </div>
+</div>
